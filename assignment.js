@@ -28,7 +28,6 @@ seats.push(a);
 }
 
 const length= matrix.length;
-console.log(length);
 let filled=0;   // number of seats filled so far
 function fill_aisle(){
    
@@ -80,7 +79,7 @@ function fill_aisle(){
 function fill_window(){
     let row=0;
     let temp=0;
-   console.log(filled);
+   
     while (filled<n && temp!=filled) {
     temp=filled;
             if(matrix[0][1]>row){
@@ -133,9 +132,9 @@ function fill_middle(){
 fill_aisle();  // fill aisle seats first
 fill_window(); // fill window  seats
 fill_middle();  // fill middle seats last
-console.log(seats);
 
 function print_output(){
+    
     let maxrow=0;
     for(let i=0;i<matrix.length;i++)
     maxrow= Math.max(maxrow,matrix[i][1]);
